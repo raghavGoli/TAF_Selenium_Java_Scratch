@@ -17,6 +17,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
+        cache: maven
     
     - name: Running Test Automation Framework with Maven
       run: mvn test -X -Dbrowser=chrome -DisLamdaTest=false -DisHeadless=true
@@ -49,7 +50,7 @@ jobs:
     - name: Copy Report to gh-pages folder
       if: always()
 
-      run:
+      run: |
         mkdir -p public/extent-reports
         cp -R report.html public/extent-reports/
         cp -R screenshots/ public/extent-reports/screenshots/
