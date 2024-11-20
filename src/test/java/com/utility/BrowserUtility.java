@@ -128,7 +128,7 @@ public abstract class BrowserUtility {
 		String timestamp = sdf.format(date);
 		TakesScreenshot screenshot = (TakesScreenshot) driver.get();
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir") + "//screenshots//" + name
+		String path ="./screenshots/" + name
 				+ "-" + timestamp + ".png";
 		File destFile = new File(path);
 
