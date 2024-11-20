@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
     
     - name: Running Test Automation Framework with Maven
-      run: mvn test -X -Dbrowser=chrome -DisLamdaTest=true -DisHeadless=false
+      run: mvn test -X -Dbrowser=chrome -DisLamdaTest=false -DisHeadless=true
 
     - name: Upload Test Logs Artifact
       if: always()
