@@ -20,7 +20,7 @@ jobs:
         cache: maven
     
     - name: Running Test Automation Framework with Maven
-      run: mvn clean install test -Dmaven.security.dispatcher.skip=true -X -e -Dbrowser=chrome -DisLamdaTest=false -DisHeadless=true
+      run: mvn clean install -Dmaven.security.dispatcher.skip=true -X -e -Dbrowser=chrome -DisLamdaTest=false -DisHeadless=true
 
     - name: Upload Test Logs Artifact
       if: always()
