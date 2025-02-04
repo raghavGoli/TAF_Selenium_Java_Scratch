@@ -65,7 +65,7 @@ public abstract class BrowserUtility {
 		if (browserName == Browser.CHROME) {
 			if (isHeadless) {
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=old"); // headless mode
+				options.addArguments("--headless=new"); // headless mode
 				options.addArguments("--window-size=1920,1080");
 				driver.set(new ChromeDriver(options));
 			} else {
